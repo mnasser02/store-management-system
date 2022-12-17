@@ -9,8 +9,8 @@
 #include "User.h"
 #include <algorithm>
 
-const std::string DEALER_PASSWORD = "1223334444";
-const std::string EMPLOYEE_PASSWORD = "122333";
+const std::string DEALER_PASSWORD = "abc123";
+const std::string EMPLOYEE_PASSWORD = "ab12";
 
 std::string read_product_name() {
 	std::string name;
