@@ -74,7 +74,8 @@ int main() {
 				<< "2. Remove a product" << std::endl
 				<< "3. Edit a product" << std::endl
 				<< "4. Display all products" << std::endl
-				<< "(1/2/3/4): ";
+				<< "5. Exit" << std::endl
+				<< "(1/2/3/4/5): ";
 			int dealer_choice = 0;
 			std::cin >> dealer_choice;
 			if (dealer_choice == 1) {
@@ -104,6 +105,9 @@ int main() {
 			else if (dealer_choice == 4) {
 				tech_store.display();
 			}
+			else if (dealer_choice == 5) {
+				return 0;
+			}
 			std::cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-" << std::endl;
 			std::cout << std::endl;
 		}
@@ -121,7 +125,8 @@ int main() {
 		while (true) {
 			std::cout << "1. Edit a product" << std::endl
 				<< "2. Display all products" << std::endl
-				<< "(1/2): ";
+				<< "3. Exit" << std::endl
+				<< "(1/2/3): ";
 			int employee_choice = 0;
 			std::cin >> employee_choice;
 			if (employee_choice == 1) {
@@ -132,6 +137,9 @@ int main() {
 			}
 			else if (employee_choice == 2) {
 				tech_store.display();
+			}
+			else if (employee_choice == 3) {
+				return 0;
 			}
 			std::cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-" << std::endl;
 			std::cout << std::endl;
@@ -145,7 +153,8 @@ int main() {
 			std::cout << "1. Purchase a product" << std::endl
 				<< "2. View cart" << std::endl
 				<< "3. Display available products" << std::endl
-				<< "(1/2/3): ";
+				<< "4. Exit" << std::endl
+				<< "(1/2/3/4): ";
 			int customer_choice = 0;
 			std::cin >> customer_choice;
 			if (customer_choice == 1) {
@@ -172,6 +181,9 @@ int main() {
 			}
 			else if (customer_choice == 3) {
 				tech_store.customer_display();
+			}
+			else if (customer_choice == 4) {
+				return 0;
 			}
 			std::cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-" << std::endl;
 			std::cout << std::endl;
