@@ -121,6 +121,11 @@ int main() {
 					std::cout << "Name of product: ";
 					std::cin.ignore();
 					getline(std::cin, name);
+					if (name == "") {
+						invalid_input();
+						std::cout << "+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-" << std::endl << std::endl;
+						continue;
+					}
 					std::cout << "Price of product: ";
 					std::cin >> price;
 					if (!std::cin || price < 0) {

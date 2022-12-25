@@ -25,9 +25,12 @@ void Customer::add_to_cart(const std::string& pathname, int i) {
 			quantity = stoi(tmp);
 			std::cout << "specify quantity: ";
 			std::cin >> q;
-			q = abs(q);
 			if(q > quantity) {
 				std::cout << "amount specified is not available" << std::endl;
+				return;
+			}
+			if (q < 0) {
+				std::cout << "invalid input" << std::endl;
 				return;
 			}
 			//check if product is already in cart and increase quantity
@@ -59,11 +62,11 @@ void Customer::add_to_cart(const std::string& pathname, int i) {
 void Customer::remove_from_cart(const std::string& pathname, int i, int q) {
 	--i;
 	if (i >= cart_.size()) {
-		std::cout << "cart does not containt " << i + 1 << " product(s)" << std::endl;
+		std::cout << "cart does not contain a product of index " << i + 1 << std::endl;
 		return;
 	}
 	if (q > cart_[i].quantity()) {
-		std::cout << "cart does not containt " << q << " of product " << i + 1 << std::endl;
+		std::cout << "cart does not contain " << q << " of product " << i + 1 << std::endl;
 		return;
 	}
 	bill_ -= cart_[i].price() * q;
