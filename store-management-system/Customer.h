@@ -12,10 +12,11 @@ private:
 public:
 	Customer(const User&);
 
-	//getters
 	int bill() const;
-	std::vector<Product> cart() const;
 
-	void add_product(const Product&);
+	void add_to_cart(const std::string&, int);
+	void remove_from_cart(const std::string&, int, int);
+	void view_products(const std::string&) const;
+	void view_cart() const;
 };
 
